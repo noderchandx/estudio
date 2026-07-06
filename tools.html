@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>টুলস্‌ || e-Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">eS</span> e-Studio</a>
+    <nav class="main-nav">
+      <a href="index.html">হোম</a>
+      <a href="jobs.html">চাকরি</a>
+      <a href="admission.html">ভর্তি</a>
+      <a href="formats.html">ফরমেট</a>
+      <a href="tools.html" class="active">টুলস্‌</a>
+      <a href="photo-studio.html">ফটো স্টুডিও</a>
+      <a href="links.html">লিংক</a>
+      <a href="packages.html">প্যাকেজ</a>
+      <a href="blog.html">ব্লগ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+      <a href="register.html" class="btn btn-accent btn-sm">Register</a>
+      <button class="menu-toggle" aria-label="মেনু">☰</button>
+    </div>
+  </div>
+</header>
+<div class="sprocket-rule"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">ফ্রি ইউটিলিটি</div>
+    <h1>ক্যালকুলেটর ও কনভার্টার টুলস্‌</h1>
+    <p class="lede">দৈনন্দিন প্রয়োজনীয় হিসাব — বয়স, BMI, তারিখ ও একক রূপান্তর — সরাসরি ব্রাউজারেই করে নিন।</p>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="container">
+    <div class="grid grid-3">
+
+      <div class="tool-panel" id="age">
+        <div class="icon">🎂</div>
+        <h3>বয়স ক্যালকুলেটর</h3>
+        <div class="field"><label>জন্ম তারিখ</label><input type="date" id="dob"></div>
+        <div class="field"><label>যে তারিখ পর্যন্ত হিসাব (ঐচ্ছিক)</label><input type="date" id="atdate"></div>
+        <button class="btn btn-accent btn-block" onclick="calcAge()">হিসাব করুন</button>
+        <div class="result-box" id="age-result"></div>
+      </div>
+
+      <div class="tool-panel" id="bmi">
+        <div class="icon">⚖️</div>
+        <h3>BMI ক্যালকুলেটর</h3>
+        <div class="field"><label>উচ্চতা (সেমি)</label><input type="number" id="height" placeholder="যেমনঃ ১৭০"></div>
+        <div class="field"><label>ওজন (কেজি)</label><input type="number" id="weight" placeholder="যেমনঃ ৬৫"></div>
+        <button class="btn btn-accent btn-block" onclick="calcBMI()">হিসাব করুন</button>
+        <div class="result-box" id="bmi-result"></div>
+      </div>
+
+      <div class="tool-panel" id="dateconvert">
+        <div class="icon">📅</div>
+        <h3>তারিখ কনভার্টার (Eng → বাংলা)</h3>
+        <div class="field"><label>তারিখ নির্বাচন করুন</label><input type="date" id="dateconv"></div>
+        <button class="btn btn-accent btn-block" onclick="convertDate()">কনভার্ট করুন</button>
+        <div class="result-box" id="date-result"></div>
+      </div>
+
+      <div class="tool-panel" id="unit">
+        <div class="icon">📏</div>
+        <h3>একক কনভার্টার (দৈর্ঘ্য)</h3>
+        <div class="field"><label>মান</label><input type="number" id="unit-value" placeholder="যেমনঃ ১০০"></div>
+        <div class="field"><label>থেকে</label>
+          <select id="unit-from">
+            <option value="m">মিটার</option><option value="km">কিলোমিটার</option><option value="cm">সেন্টিমিটার</option>
+            <option value="mm">মিলিমিটার</option><option value="mile">মাইল</option><option value="ft">ফুট</option><option value="inch">ইঞ্চি</option>
+          </select>
+        </div>
+        <div class="field"><label>এককে</label>
+          <select id="unit-to">
+            <option value="km">কিলোমিটার</option><option value="m">মিটার</option><option value="cm">সেন্টিমিটার</option>
+            <option value="mm">মিলিমিটার</option><option value="mile">মাইল</option><option value="ft">ফুট</option><option value="inch">ইঞ্চি</option>
+          </select>
+        </div>
+        <button class="btn btn-accent btn-block" onclick="convertUnit()">কনভার্ট করুন</button>
+        <div class="result-box" id="unit-result"></div>
+      </div>
+
+      <div class="tool-panel">
+        <div class="icon">🪪</div>
+        <h3>NID প্রিন্ট রেডি</h3>
+        <p class="muted">আপনার NID ছবি আপলোড করে সঠিক অনুপাতে প্রিন্ট রেডি ফাইল তৈরি করুন।</p>
+        <a href="#" class="btn btn-outline btn-block">আপলোড করুন (ডেমো)</a>
+      </div>
+
+      <div class="tool-panel">
+        <div class="icon">🖨️</div>
+        <h3>A4 প্রিন্ট রেডি</h3>
+        <p class="muted">যেকোনো ছবি বা ডকুমেন্ট A4 সাইজে সাজিয়ে প্রিন্ট রেডি করুন।</p>
+        <a href="#" class="btn btn-outline btn-block">আপলোড করুন (ডেমো)</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="sprocket-rule"></div>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="assets/script.js"></script>
+<script src="assets/footer.js"></script>
+</body>
+</html>

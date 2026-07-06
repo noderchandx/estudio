@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>রেজিস্টার || e-Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">eS</span> e-Studio</a>
+    <nav class="main-nav">
+      <a href="index.html">হোম</a>
+      <a href="jobs.html">চাকরি</a>
+      <a href="admission.html">ভর্তি</a>
+      <a href="formats.html">ফরমেট</a>
+      <a href="tools.html">টুলস্‌</a>
+      <a href="photo-studio.html">ফটো স্টুডিও</a>
+      <a href="links.html">লিংক</a>
+      <a href="packages.html">প্যাকেজ</a>
+      <a href="blog.html">ব্লগ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+      <a href="register.html" class="btn btn-accent btn-sm">Register</a>
+      <button class="menu-toggle" aria-label="মেনু">☰</button>
+    </div>
+  </div>
+</header>
+<div class="sprocket-rule"></div>
+
+<section>
+  <div class="container">
+    <div class="auth-wrap">
+      <h2>নতুন অ্যাকাউন্ট তৈরি করুন</h2>
+      <p class="auth-sub muted">বিনামূল্যে নিবন্ধন করে e-Studio-র সব ফিচার ব্যবহার শুরু করুন</p>
+      <div class="notice" id="form-notice" style="display:none;"></div>
+      <form onsubmit="handleAuthDemo(event, 'এটি একটি ডেমো ফর্ম — লাইভ সাইটে এখানে সত্যিকারের রেজিস্ট্রেশন যুক্ত হবে।')">
+        <div class="field"><label>পূর্ণ নাম</label><input type="text" required placeholder="আপনার নাম"></div>
+        <div class="field"><label>ইমেইল</label><input type="email" required placeholder="you@example.com"></div>
+        <div class="field"><label>মোবাইল নাম্বার</label><input type="tel" required placeholder="01XXXXXXXXX"></div>
+        <div class="field"><label>পাসওয়ার্ড</label><input type="password" required placeholder="••••••••"></div>
+        <button type="submit" class="btn btn-accent btn-block">নিবন্ধন করুন</button>
+      </form>
+      <p class="text-center" style="margin-top:18px;font-size:.9rem;">আগে থেকেই অ্যাকাউন্ট আছে? <a href="login.html" style="color:var(--accent-2);font-weight:600;">লগইন করুন</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="sprocket-rule"></div>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="assets/script.js"></script>
+<script src="assets/footer.js"></script>
+</body>
+</html>
